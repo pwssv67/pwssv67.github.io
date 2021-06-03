@@ -141,7 +141,7 @@ a{
     text-align: center;
 }
 
-.describtion{
+.description{
     margin: 20px 0px;
 }
 
@@ -269,13 +269,14 @@ a{
 }
 
 .link-img {
-    width:3vw;
-    height:3vw;
+    width:5em;
+    height:5em;
 }
 
 .last{
     color: rgb(148, 148, 148);
 }
+
 
 @media all and (max-width:800px ) {
     .nav-list{
@@ -316,5 +317,9 @@ a{
     }
     .project-text{
         width: 80%
+    }
+    .link-img {
+        height: 4em;
+        width: 4em;
     }
 }
