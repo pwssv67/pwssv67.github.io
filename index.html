@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Smolyaninov</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="scroll-link">Главная</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="scroll-link">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="scroll-link">Навыки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="scroll-link">Проекты </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="scroll-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-line"></div>
+        </header>
+
+        <div class="page1">
+            <div class="text-part">
+                <div class="name">Егор Смольянинов</div>
+                <div class="short-about">Разработчик мобильных приложений. <br> 21 год. Санкт-Петербург</div>
+                <div class="choose-lang">
+                    <div class="chosed ru">ru</div>
+                    <div class="eng">eng</div>
+                </div>
+            </div>
+            <div class="img-wrapper">
+                <img src="img/IMG_4080.JPG" alt="" class="my-photo">
+            </div>
+        </div>
+
+        <div class="page2" id="about">
+           <h1 class="title">Обо мне</h1>
+           <ul class="facts-list">
+               <li class="fact">Привет! Я Егор, Android-разработчик из Санкт-Петербурга. <br>
+                Интересуюсь мобильной разработкой и всем, что с ней связано.</li>
+
+                 <li class="fact">Учусь на специальности "Информационные системы и технологии" <br>
+                    в СПбГУАП.</li>
+
+                 <li class="fact">Готов воплощать в жизнь смелые и инетерсные проекты<br>
+                    с хорошими людьми.</li>
+           </ul>
+        </div>
+
+
+        <div class="page3" id="skills">
+            <h1 class="title" >Навыки</h1>
+            <div class="describtion">Я работаю с такими технологиями как</div>
+            <ul class="skills-list">
+                <li class="skill">
+                    <div class="skill-img-wrapper">
+                        <img src="img/android-square.svg" alt="" class="skill-img">
+                    </div>
+                    <div class="caption">Android SDK</div>
+                </li>
+                <li class="skill">
+                    <div class="skill-img-wrapper">
+                        <img src="img/kotlin-square.svg" alt="" class="skill-img">
+                    </div>
+                    <div class="caption">Kotlin</div>
+                </li>
+                <li class="skill">
+                    <div class="skill-img-wrapper">
+                        <img src="img/git_logo.png" alt="" class="skill-img">
+                    </div>
+                    <div class="caption">Git</div>
+                </li>
+                <li class="skill">
+                    <div class="skill-img-wrapper">
+                        <img src="img/compose-square.png" alt="" class="skill-img">
+                    </div>
+                    <div class="caption">Jetpack Compose</div>
+                </li>
+                <li class="skill">
+                    <div class="skill-img-wrapper">
+                        <img src="img/flutter.png" alt="" class="skill-img">
+                    </div>
+                    <div class="caption">Flutter</div>
+                </li>
+            </ul>
+         </div>
+
+         <div class="page4" id="projects">
+            <h1 class="title" >Проекты</h1>
+            <ul class="projects-list">
+                <li class="project">
+                    <div class="project-img-wrapper">
+                        <img src="img/phone.png" alt="" class="project-img">
+                        <img src="img/lykke.jpg" alt="" class="screen">
+                    </div>
+
+                    <div class="project-text">
+                        <h2>Lykke</h2>
+                        <div class="project-description">Фитнес-приложение с уникальныи алгоритмом распознавания пяти видов упражнений с помощью акселерометра, с возможностью соревноваться с другими людьми как по всему миру, так и в самостоятельно созданной группе или среди ближайших людей.<br><br>
+                            Приложение разработано с использованием Koin, Android Nvigation Components, Firebase, Kotlin Coroutines.</div>
+                    </div>
+                </li>
+
+                <li class="project">
+                    <div class="project-img-wrapper">
+                        <img src="img/phone.png" alt="" class="project-img">
+                        <img src="img/microblading.jpg" alt="" class="screen">
+                    </div>
+
+                    <div class="project-text">
+                        <h2>Microblading App</h2>
+                        <div class="project-description">Приложение для мастеров макияжа и маникюра для заполнения всех необходимых форм и согласий от клиентов в электронном виде, с возможностью как отправить форму клиенту на почту для заполнения, так и заполнить прямо на устройстве, после чего форма сохраняется в pdf для печати.<br><br>
+                             Разработано с использованием Dagger2, RxJava2, Retrofit</div>
+                    </div>
+                </li>
+
+                <li class="project">
+                    <div class="project-img-wrapper">
+                        <img src="img/phone.png" alt="" class="project-img">
+                        <img src="img/health_counter.jpg" alt="" class="screen">
+                    </div>
+
+                    <div class="project-text">
+                        <h2>Health Counter</h2>
+                        <div class="project-description">Приложение чтобы следить за количеством выпитой воды, употреблённых калорий и времени физической нагрузки каждый день, а также посмотреть свою статистику, настроить свои цели и просмотреть статьи, связанные со здоровым образом жизни.<br><br>
+                             Разработано с использованием Jetpack Compose, Retrofit, Room.</div>
+                    </div>
+                </li>
+            </ul>
+         </div>
+
+         <div class="page5" id="contact">
+            <h1 class="title">Контакты</h1>
+            <div class="describtion">Хочешь узнать больше или просто поговорить? <br>
+                You are welcome!</div>
+            <button class="send">
+                <a href="mailto:pwssv67@gmail.com" class="email"> Связаться</a>
+            </button>
+            <ul class="links">
+                <li class="link">
+                    <a href="#" class="link-img-wrapper">
+                        <img src="img/linkedin.png" alt="linkedin link" class="link-img">
+                    </a>
+                </li>
+                <li class="link">
+                    <a href="#" class="link-img-wrapper">
+                        <img src="img/instagram.svg" alt="instagram link" class="link-img">
+                    </a>
+                </li>
+                <li class="link">
+                    <a href="#" class="link-img-wrapper">
+                        <img src="img/telegram.png" alt="telegram link" class="link-img">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="last"> Свяжись со мной в
+                LinkedIn, Instagram, Telegram</div>
+         </div>
+
+        <script src="js/main.js"> </script>
+    </body>
+</html>
