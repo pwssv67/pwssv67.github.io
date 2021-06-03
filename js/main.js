@@ -1,5 +1,5 @@
 //обёртка в скобки чтобы не было конфликтов с именами
-{
+function start(){
     const scrollLink = document.querySelectorAll('a.scroll-link');
     for (let i = 0; i < scrollLink.length; i++) {
         scrollLink[i].addEventListener('click', function (event) {
@@ -27,8 +27,9 @@
         }
     }
 }
+document.onload = start;
 
-var isLanguageEnglish = false
+var isLanguageEnglish = false;
 
 function setEnglishLanguage() {
     document.getElementsByClassName("eng")[0].classList.add("chosed");
