@@ -1,7 +1,14 @@
 //обёртка в скобки чтобы не было конфликтов с именами
-function start(){
+function start() {
     console.log("start");
     const scrollLink = document.querySelectorAll('a.scroll-link');
+    const navMenu = document.getElementsByClassName("nav")[0];
+    const hamburger = document.getElementsByClassName("hamburger")[0]
+
+    if (window.innerWidth <= 800) {
+        document.getElementsByClassName("nav")[0].classList.add("hide");
+    }
+
     for (let i = 0; i < scrollLink.length; i++) {
         scrollLink[i].addEventListener('click', function (event) {
             console.log("sdfdsf")
@@ -12,40 +19,65 @@ function start(){
                 behavior: 'smooth',
                 block: 'start',
             })
+            if (window.getComputedStyle(hamburger).display != "none") {
+                navMenu.classList.add("hide");
+            }
         });
     }
 
-    
-    const hamburgerMenu = document.getElementsByClassName("hamburger-menu")[0];
-    document.getElementsByClassName("hamburger")[0].addEventListener("click", function() {
+
+    hamburger.addEventListener("click", function () {
         console.log("osodojsod")
-        if (hamburgerMenu.classList.contains("hide")) {
-            hamburgerMenu.classList.remove("hide")
+        if (navMenu.classList.contains("hide")) {
+            navMenu.classList.remove("hide")
         } else {
-            hamburgerMenu.classList.add("hide")
+            navMenu.classList.add("hide")
         }
     });
 
-    const eng = document.getElementsByClassName("eng")
-    eng.forEach(element, index => {
-        element.addEventListener ("click",  function() {
-            if (true) {
+    const eng = document.getElementsByClassName("eng");
+    for (let i = 0; i < eng.length; i++) {
+        eng[i].addEventListener("click", function () {
+            if (!isLanguageEnglish) {
                 setEnglishLanguage();
                 isLanguageEnglish = true;
             }
-    });
-    });
+        });
+    }
 
-    document.getElementsByClassName("ru")[0].onclick = function() {
-        if (isLanguageEnglish) {
-            setRusLanguage();
-            isLanguageEnglish = false;
+
+    const ru = document.getElementsByClassName("ru");
+    for (let i = 0; i < ru.length; i++) {
+        ru[i].onclick = function () {
+            if (isLanguageEnglish) {
+                setRusLanguage();
+                isLanguageEnglish = false;
+            }
         }
     }
 }
 document.onload = start();
 
 var isLanguageEnglish = false;
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth <= 800) {
+        document.getElementsByClassName("nav")[0].classList.add("hide");
+    } else {
+        document.getElementsByClassName("nav")[0].classList.remove("hide");
+    }
+})
+
+const mobileLangSwitcher = document.getElementsByClassName("lang-mobile")[0];
+window.addEventListener("scroll", function() {
+    if (this.pageYOffset >= 200 ) {
+        mobileLangSwitcher.classList.add("hide"); 
+    } else {
+        mobileLangSwitcher.classList.remove("hide")
+    }
+})
+
+
 
 function setEnglishLanguage() {
     document.getElementsByClassName("eng")[0].classList.add("chosed");
@@ -88,7 +120,7 @@ function translateNavigation(navElementsTitles) {
 
     let titleElements = document.getElementsByClassName("title");
     for (let i = 0; i < titleElements.length; i++) {
-        titleElements[i].textContent = navElementsTitles[i+1];
+        titleElements[i].textContent = navElementsTitles[i + 1];
     }
 }
 
@@ -100,7 +132,7 @@ function translateHeader(name, about) {
 
 function translateFacts(facts) {
     let factElements = document.getElementsByClassName("fact")
-    for (let i = 0; i<factElements.length;i++) {
+    for (let i = 0; i < factElements.length; i++) {
         factElements[i].innerHTML = facts[i];
     }
 }
@@ -112,7 +144,7 @@ function translateDescriptions(skillsDescription, contactDescription) {
 
 function translateProjects(projectDescriptions) {
     let projectDescriptionElements = document.getElementsByClassName("project-description");
-    for (let i = 0; i<projectDescriptionElements.length; i++) {
+    for (let i = 0; i < projectDescriptionElements.length; i++) {
         projectDescriptionElements[i].innerHTML = projectDescriptions[i];
     }
 }

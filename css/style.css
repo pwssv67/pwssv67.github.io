@@ -325,7 +325,6 @@ a{
         position:absolute;
         top:97px;
         right: -3px;
-
     }
     .project{
         flex-direction: column;
@@ -348,6 +347,9 @@ a{
     .link-img {
         height: 4em;
         width: 4em;
+    }
+    .hide {
+        display: none;
     }
     
 }
