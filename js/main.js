@@ -1,8 +1,10 @@
 //обёртка в скобки чтобы не было конфликтов с именами
 function start(){
+    console.log("start");
     const scrollLink = document.querySelectorAll('a.scroll-link');
     for (let i = 0; i < scrollLink.length; i++) {
         scrollLink[i].addEventListener('click', function (event) {
+            console.log("sdfdsf")
             // console.log(event) //просмотр всех свойств event
             event.preventDefault(); // отмена события (обновления страницы)
             const id = scrollLink[i].getAttribute('href'); //вытаскиваем id для дальнейшего обращения
@@ -12,13 +14,27 @@ function start(){
             })
         });
     }
-    document.getElementsByClassName("eng")[0].addEventListener ("click",  function() {
-        if (true) {
-            setEnglishLanguage();
-            isLanguageEnglish = true;
+
+    
+    const hamburgerMenu = document.getElementsByClassName("hamburger-menu")[0];
+    document.getElementsByClassName("hamburger")[0].addEventListener("click", function() {
+        console.log("osodojsod")
+        if (hamburgerMenu.classList.contains("hide")) {
+            hamburgerMenu.classList.remove("hide")
+        } else {
+            hamburgerMenu.classList.add("hide")
         }
-    }
-    );
+    });
+
+    const eng = document.getElementsByClassName("eng")
+    eng.forEach(element, index => {
+        element.addEventListener ("click",  function() {
+            if (true) {
+                setEnglishLanguage();
+                isLanguageEnglish = true;
+            }
+    });
+    });
 
     document.getElementsByClassName("ru")[0].onclick = function() {
         if (isLanguageEnglish) {
@@ -27,13 +43,15 @@ function start(){
         }
     }
 }
-document.onload = start;
+document.onload = start();
 
 var isLanguageEnglish = false;
 
 function setEnglishLanguage() {
     document.getElementsByClassName("eng")[0].classList.add("chosed");
     document.getElementsByClassName("ru")[0].classList.remove("chosed");
+    document.getElementsByClassName("eng")[1].classList.add("chosed");
+    document.getElementsByClassName("ru")[1].classList.remove("chosed");
     translateToEnglish();
 }
 
@@ -62,9 +80,10 @@ function translateToRussian() {
 }
 
 function translateNavigation(navElementsTitles) {
-    let navElements = document.getElementsByClassName("nav-item");
+    let navElements = document.querySelectorAll('a.scroll-link');
     for (let i = 0; i < navElements.length; i++) {
         navElements[i].textContent = navElementsTitles[i];
+
     }
 
     let titleElements = document.getElementsByClassName("title");
