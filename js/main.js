@@ -1,4 +1,3 @@
-//обёртка в скобки чтобы не было конфликтов с именами
 function start() {
     console.log("start");
     const scrollLink = document.querySelectorAll('a.scroll-link');
