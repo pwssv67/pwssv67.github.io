@@ -78,7 +78,6 @@ window.addEventListener("scroll", function() {
 })
 
 
-
 function setEnglishLanguage() {
     document.getElementsByClassName("eng")[0].classList.add("chosed");
     document.getElementsByClassName("ru")[0].classList.remove("chosed");
