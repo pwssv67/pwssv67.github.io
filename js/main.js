@@ -58,6 +58,8 @@ function start() {
 }
 document.onload = start();
 
+//TODO change all hide/show to animation-class-*
+
 var isLanguageEnglish = false;
 
 window.addEventListener("resize", function() {
@@ -71,9 +73,12 @@ window.addEventListener("resize", function() {
 const mobileLangSwitcher = document.getElementsByClassName("lang-mobile")[0];
 window.addEventListener("scroll", function() {
     if (this.pageYOffset >= 200 ) {
-        mobileLangSwitcher.classList.add("hide"); 
+        mobileLangSwitcher.classList.remove("animation-class-show");
+        mobileLangSwitcher.classList.add("animation-class-hide"); 
     } else {
-        mobileLangSwitcher.classList.remove("hide")
+        mobileLangSwitcher.classList.remove("animation-class-hide");
+        mobileLangSwitcher.classList.add("animation-class-show");
+
     }
 })
 
