@@ -295,7 +295,7 @@ a{
 
 .animation-class-hide {
     animation-name: hide;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode:forwards;
@@ -303,7 +303,7 @@ a{
 
 .animation-class-show {
     animation-name: show;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode:forwards;
