@@ -93,6 +93,8 @@ function setEnglishLanguage() {
 function setRusLanguage() {
     document.getElementsByClassName("eng")[0].classList.remove("chosed");
     document.getElementsByClassName("ru")[0].classList.add("chosed");
+    document.getElementsByClassName("eng")[1].classList.remove("chosed");
+    document.getElementsByClassName("ru")[1].classList.add("chosed");
     translateToRussian();
 }
 
